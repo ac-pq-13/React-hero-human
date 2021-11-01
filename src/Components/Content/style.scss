@@ -1,0 +1,75 @@
+.v_main__wrapper{
+    height: calc(100% - 300px);
+    overflow: auto;
+    background-color: #ECE172;
+    & >.h_human_wrapper{
+        border: 2px solid black;
+        border-radius: 20px;
+        width: 400px;
+        height: 400px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 10px;
+        flex-direction: column;
+        background-color: burlywood;
+        &>img{
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            border: 2px solid black;
+        }
+        &>ul{
+            padding: 10px 10px;
+            width: 400px;
+            height: 30%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: flex-start;
+            &>li{
+                list-style: none;
+                padding: 0px 0px 5px 0px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    & >.h_hero_wrapper{
+        margin: 10px;
+        border-radius: 20px;
+        border: 1px solid;
+        width: 400px; 
+        height: 400px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content:center;
+        background-color:  #F4554E;
+        & >.hero_card{
+            border-radius: 20px;
+            width: 80%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &> img{
+                height:200px;
+                width: 200px;
+                border-radius: 50%;
+                border: 1px solid;
+            }
+            &>ul{
+            margin:10px;
+                &>li{
+                    list-style: none;
+            }            
+        }
+        & >.hero_input{
+            margin: 10px;
+        }
+
+
+}
+}
+}
