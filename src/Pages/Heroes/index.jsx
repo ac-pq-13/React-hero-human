@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
-
+import {useDispatch} from 'react-redux'
+import{selectYear} from '../../actions/year/select'
 const ACCESS_TOKEN = '3875372609247663'
 const DOMAIN = 'https://www.superheroapi.com/api.php/'
 const SEARCH = '/search'
@@ -10,6 +11,7 @@ const Heroes = () => {
     const [estatura, setEstatura] = useState("")
     const [trabajo, setTrabajo] = useState("")
     const [img, setImg] = useState("https://www.pngkey.com/png/full/21-213224_unknown-person-icon-png-download.png")
+    const dispatch = useDispatch()
     const Hero = async () => {
 
         try {
@@ -28,7 +30,15 @@ const Heroes = () => {
         const { target : { value } } = e
         console.log(value)
         setNombre(value)
-    }  
+    } 
+
+    const handleChange = (e) => {
+        const {
+          target: { value },
+        } = e;
+        dispatch(selectYear(value));
+      };
+    
     return (
         <div className="h_hero_wrapper">
             <div className="hero_input">
@@ -43,6 +53,9 @@ const Heroes = () => {
                         <li>Ocupacion: {trabajo } </li>        
                 </ul> 
                 <img src={img} alt="" />
+            </div>
+            <div>
+                <input type="number" onChange={handleChange} min='00'/>
             </div>
         </div>
     )

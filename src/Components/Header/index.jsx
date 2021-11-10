@@ -1,7 +1,10 @@
 import React from 'react'
+import {useSelector} from 'react-redux'
 import {Link} from 'react-router-dom'
 import './style.scss'
 const Header= () => {
+    const store = useSelector((s)=>s.user)
+    console.log(`store`, store)
     return (
         <div className="v_header__wrapper">
         <div className="v_header__logo">
@@ -15,12 +18,12 @@ const Header= () => {
                 <li>
                     <Link to="/humans">Humans</Link>
                 </li>
-                {/* <li>
-                    <Link to="/store">Tienda</Link>
+                <li>
+                    <Link to="/home">Home</Link>
                 </li>
                 <li>
-                    <Link to="/about">Sobre</Link>
-                </li> */}
+                    <p>Account: <br />{store.selected.nombre}</p>
+                </li>
             </ul>  
         </div>
         

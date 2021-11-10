@@ -68,8 +68,17 @@
         & >.hero_input{
             margin: 10px;
         }
+       
 
-
-}
-}
+        }
+    } 
+    .p_home__wrapper_card {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .p_home_form {
+      max-width: 350px;
+      padding: 30px;
+    }
 }

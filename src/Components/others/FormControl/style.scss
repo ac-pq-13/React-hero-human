@@ -1,0 +1,8 @@
+.c_card__form_control {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0px;
+    & > input {
+      outline: none;
+    }
+  }

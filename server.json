@@ -1,0 +1,18 @@
+{
+  "personas": [
+    {
+      "nombre": "hola",
+      "apellidos": "",
+      "edad": "",
+      "ciudad": "",
+      "id": 1
+    },
+    {
+      "nombre": "Juan",
+      "apellidos": "",
+      "edad": "",
+      "ciudad": "",
+      "id": 2
+    }
+  ]
+}
